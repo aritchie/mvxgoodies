@@ -9,11 +9,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvvmCross.Autofac.Interop",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6677929E-EDEE-45A3-A655-C354202F96E9}"
 	ProjectSection(SolutionItems) = preProject
+		license.txt = license.txt
 		nuspec\MvvmCross.Autofac.Interop.nuspec = nuspec\MvvmCross.Autofac.Interop.nuspec
 		nuspec\MvvmCross.ReactiveUI.Interop.nuspec = nuspec\MvvmCross.ReactiveUI.Interop.nuspec
 		nuspec\nuget.exe = nuspec\nuget.exe
 		nuspec\pack.cmd = nuspec\pack.cmd
 		nuspec\push.cmd = nuspec\push.cmd
+		readme.md = readme.md
 	EndProjectSection
 EndProject
 Global
