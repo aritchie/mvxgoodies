@@ -3,7 +3,7 @@ using MvvmCross.Core.ViewModels;
 using ReactiveUI;
 
 
-namespace MvvmCross.ReactiveUiExtensions
+namespace MvvmCross.ReactiveUI.Interop
 {
     public abstract class MvxReactiveViewModel : MvxViewModel, IReactiveNotifyPropertyChanged<IReactiveObject>, IReactiveObject
     {
@@ -14,7 +14,6 @@ namespace MvvmCross.ReactiveUiExtensions
         {
             return this.reactiveObj.SuppressChangeNotifications();
         }
-
 
         public IObservable<IReactivePropertyChangedEventArgs<IReactiveObject>> Changing => this.reactiveObj.Changing;
         public IObservable<IReactivePropertyChangedEventArgs<IReactiveObject>> Changed => this.reactiveObj.Changed;

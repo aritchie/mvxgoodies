@@ -2,7 +2,7 @@
 using ReactiveUI;
 
 
-namespace MvvmCross.ReactiveUiExtensions
+namespace MvvmCross.ReactiveUI.Interop
 {
     public class MvxReactiveObject : ReactiveObject
     {
