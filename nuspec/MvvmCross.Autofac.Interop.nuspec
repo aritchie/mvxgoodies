@@ -13,16 +13,16 @@ Upgrade of Autofac.Extras.MvvmCross that uses current STABLE version of autofac 
         <licenseUrl>http://opensource.org/licenses/ms-pl.html</licenseUrl>
         <projectUrl>https://github.com/aritchie/mvxgoodies</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <tags>windows uwp winphone android ios xamarin xam.pcl settings</tags>
+        <tags>mvvmcross autofac android ios xamarin xam.pcl</tags>
         <dependencies>
             <dependency id="MvvmCross" version="[4, 5)" />
-            <dependency id="autofac" version="[3.5.2, 4)" />
+            <dependency id="Autofac" version="[3.5.2, 4)" />
         </dependencies>
         <releaseNotes>
 Initial Release
         </releaseNotes>
     </metadata>
     <files>
-        <file src="..\MvvmCross.Autofac.Interop\MvvmCross.Autofac.Interop.dll" target="lib\portable-net45+netcore45+win8+wpa81+wp8+MonoAndroid10+Xamarin.iOS10\" />
+        <file src="..\MvvmCross.Autofac.Interop\bin\Release\MvvmCross.Autofac.Interop.dll" target="lib\portable-net45+netcore45+win8+wpa81+wp8+MonoAndroid10+Xamarin.iOS10\" />
     </files>
 </package>

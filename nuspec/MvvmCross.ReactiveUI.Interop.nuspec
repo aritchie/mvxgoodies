@@ -13,7 +13,7 @@ Proper interop between MvvmCross and ReactiveUI via MvxReactiveViewModel
         <licenseUrl>http://opensource.org/licenses/ms-pl.html</licenseUrl>
         <projectUrl>https://github.com/aritchie/mvxgoodies</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <tags>windows uwp winphone android ios xamarin xam.pcl settings</tags>
+        <tags>mvvmcross rx reactiveui android ios xamarin xam.pcl</tags>
         <dependencies>
             <dependency id="MvvmCross" version="[4, 5)" />
             <dependency id="reactiveui" version="[6.5, 7)" />
@@ -23,6 +23,6 @@ Initial release
         </releaseNotes>
     </metadata>
     <files>
-        <file src="..\MvvmCross.ReactiveUI.Interop\MvvmCross.ReactiveUI.Interop.dll" target="lib\portable-net45+netcore45+win8+wpa81+wp8+MonoAndroid10+Xamarin.iOS10\" />
+        <file src="..\MvvmCross.ReactiveUI.Interop\bin\Release\MvvmCross.ReactiveUI.Interop.dll" target="lib\portable-net45+netcore45+win8+wpa81+wp8+MonoAndroid10+Xamarin.iOS10\" />
     </files>
 </package>
