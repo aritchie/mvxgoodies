@@ -6,7 +6,7 @@
         <title>MvvmCross and ReactiveUI Interop</title>
         <summary>MvvmCross and ReactiveUI Interop</summary>
         <description>
-TODO
+Proper interop between MvvmCross and ReactiveUI via MvxReactiveViewModel
         </description>
         <authors>Allan Ritchie</authors>
         <owners>Allan Ritchie</owners>
