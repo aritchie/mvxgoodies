@@ -41,23 +41,23 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MvvmCross.Binding, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvvmCross.Binding.4.1.5\lib\portable-net45+win+wpa81+wp80\MvvmCross.Binding.dll</HintPath>
+      <HintPath>..\packages\MvvmCross.Binding.4.4.0\lib\portable-net45+win+wpa81+wp80\MvvmCross.Binding.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MvvmCross.Core, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvvmCross.Core.4.1.5\lib\portable-net45+win+wpa81+wp80\MvvmCross.Core.dll</HintPath>
+      <HintPath>..\packages\MvvmCross.Core.4.4.0\lib\portable-net45+win+wpa81+wp80\MvvmCross.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MvvmCross.Localization, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvvmCross.Binding.4.1.5\lib\portable-net45+win+wpa81+wp80\MvvmCross.Localization.dll</HintPath>
+      <HintPath>..\packages\MvvmCross.Binding.4.4.0\lib\portable-net45+win+wpa81+wp80\MvvmCross.Localization.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MvvmCross.Platform, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvvmCross.Platform.4.1.5\lib\portable-net45+win+wpa81+wp80\MvvmCross.Platform.dll</HintPath>
+      <HintPath>..\packages\MvvmCross.Platform.4.4.0\lib\portable-net45+win+wpa81+wp80\MvvmCross.Platform.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="ReactiveUI, Version=6.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\reactiveui-core.6.5.0\lib\Portable-Net45+Win8+WP8+WPA81\ReactiveUI.dll</HintPath>
+    <Reference Include="ReactiveUI, Version=7.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\reactiveui-core.7.0.0\lib\portable-net45+netcore45+wpa81+win8+wp8+UAP10+MonoAndroid403+MonoTouch10+Xamarin.iOS10\ReactiveUI.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Splat, Version=1.6.2.0, Culture=neutral, processorArchitecture=MSIL">

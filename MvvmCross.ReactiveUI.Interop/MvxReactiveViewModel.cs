@@ -44,14 +44,7 @@ namespace MvvmCross.ReactiveUI.Interop
         public IObservable<IReactivePropertyChangedEventArgs<IReactiveObject>> Changed => this.reactiveObj.Changed;
 
 
-        event PropertyChangingEventHandler IReactiveObject.PropertyChanging
-        {
-            add { this.reactiveObj.PropertyChanging += value; }
-            remove { this.reactiveObj.PropertyChanging -= value; }
-        }
-
-
-        event PropertyChangingEventHandler INotifyPropertyChanging.PropertyChanging
+        public event PropertyChangingEventHandler PropertyChanging
         {
             add { this.reactiveObj.PropertyChanging += value; }
             remove { this.reactiveObj.PropertyChanging -= value; }
