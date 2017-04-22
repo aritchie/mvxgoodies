@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using MvvmCross.Core.ViewModels;
 using ReactiveUI;
 
@@ -48,6 +50,14 @@ namespace MvvmCross.ReactiveUI.Interop
         {
             add { this.reactiveObj.PropertyChanging += value; }
             remove { this.reactiveObj.PropertyChanging -= value; }
+        }
+
+        public new bool SetProperty<T>(ref T storage, T value, [CallerMemberName] string propertyName = null)
+        {
+            var original = storage;
+            IReactiveObjectExtensions.RaiseAndSetIfChanged(this, ref storage, value, propertyName);
+
+            return !EqualityComparer<T>.Default.Equals(original, value);
         }
     }
 }
