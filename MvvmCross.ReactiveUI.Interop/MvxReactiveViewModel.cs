@@ -4,6 +4,9 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using MvvmCross.Core.ViewModels;
 using ReactiveUI;
+using INotifyPropertyChanging = ReactiveUI.INotifyPropertyChanging;
+using PropertyChangingEventArgs = ReactiveUI.PropertyChangingEventArgs;
+using PropertyChangingEventHandler = ReactiveUI.PropertyChangingEventHandler;
 
 
 namespace MvvmCross.ReactiveUI.Interop
@@ -58,6 +61,54 @@ namespace MvvmCross.ReactiveUI.Interop
             IReactiveObjectExtensions.RaiseAndSetIfChanged(this, ref storage, value, propertyName);
 
             return !EqualityComparer<T>.Default.Equals(original, value);
+        }
+    }
+    
+    public abstract class MvxReactiveViewModel<T, TReturn> : MvxViewModel<T, TReturn>, IReactiveNotifyPropertyChanged<IReactiveObject>,
+        IReactiveObject, INotifyPropertyChanged, INotifyPropertyChanging
+    {
+        private readonly MvxReactiveObject reactiveObj = new MvxReactiveObject();
+        private bool suppressNpc;
+
+        protected override MvxInpcInterceptionResult InterceptRaisePropertyChanged(PropertyChangedEventArgs changedArgs)
+        {
+            if (this.suppressNpc)
+                return MvxInpcInterceptionResult.DoNotRaisePropertyChanged;
+            return base.InterceptRaisePropertyChanged(changedArgs);
+        }
+
+        public virtual IDisposable SuppressChangeNotifications()
+        {
+            this.suppressNpc = true;
+            IDisposable suppressor = this.reactiveObj.SuppressChangeNotifications();
+            return (IDisposable) new DisposableAction((Action) (() =>
+            {
+                this.suppressNpc = false;
+                suppressor.Dispose();
+            }));
+        }
+
+        public virtual void RaisePropertyChanging(PropertyChangingEventArgs args)
+        {
+            this.reactiveObj.RaisePropertyChanging<MvxReactiveObject>(args.PropertyName);
+        }
+
+        public IObservable<IReactivePropertyChangedEventArgs<IReactiveObject>> Changing => this.reactiveObj.Changing;
+
+        public IObservable<IReactivePropertyChangedEventArgs<IReactiveObject>> Changed => this.reactiveObj.Changed;
+
+        public event PropertyChangingEventHandler PropertyChanging
+        {
+            add { this.reactiveObj.PropertyChanging += value; }
+            remove { this.reactiveObj.PropertyChanging -= value; }
+        }
+
+        public new bool SetProperty<TStore>(ref TStore storage, TStore value, [CallerMemberName] string propertyName = null)
+        {
+            TStore x = storage;
+            IReactiveObjectExtensions.RaiseAndSetIfChanged(this, ref storage, value,
+                propertyName);
+            return !EqualityComparer<TStore>.Default.Equals(x, value);
         }
     }
 }
