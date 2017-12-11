@@ -4,6 +4,9 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using MvvmCross.Core.ViewModels;
 using ReactiveUI;
+using INotifyPropertyChanging = ReactiveUI.INotifyPropertyChanging;
+using PropertyChangingEventArgs = ReactiveUI.PropertyChangingEventArgs;
+using PropertyChangingEventHandler = ReactiveUI.PropertyChangingEventHandler;
 
 
 namespace MvvmCross.ReactiveUI.Interop
